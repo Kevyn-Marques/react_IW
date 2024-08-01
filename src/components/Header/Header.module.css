@@ -1,0 +1,30 @@
+.header{
+    background-color: black;
+    border-bottom: red solid 2px;
+    font-size: 1.5em;
+    color:antiquewhite;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position:fixed;
+    top: 0;
+    left:0;
+    padding: 0.5rem;
+    align-items: center;
+    width:100%;
+
+}
+.header span{
+    font-size:2rem;
+    font-weight: 500%;
+    color:crimson;
+}
+.header nav{
+    margin-right:2rem;
+}
+.header a{
+    text-decoration: none;
+    padding:0.5rem;
+    font-size:1.5rem;
+    color:white;
+}
