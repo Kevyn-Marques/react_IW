@@ -1,6 +1,7 @@
 import Header from "./components/Header";
 import Banner from "./components/Banner";
 import Container from "./components/Container";
+import Category, {categories,filterCategory} from "./components/Category";
 import Card from "./components/Card";
 import Footer from "./components/Footer";
 
@@ -10,14 +11,11 @@ function App() {
     <Header/>
     <Banner image = "favoritos" />
     <Container>
-      <h1>Filmes</h1>
-      <section className="cards">
-        <Card id="B_nq7VTJZds"/>
-        <Card id="B_nq7VTJZds"/>
-        <Card id="B_nq7VTJZds"/>
-        <Card id="B_nq7VTJZds"/>
-        <Card id="B_nq7VTJZds"/>
-      </section>
+       {categories.map((category,index) =>
+         <Category category={category}>
+          {filterCategory(index).map((video) => <Card id={video.id} key={video.id} />)}
+         </Category>
+         )}
     </Container>
     <Footer/>
     </>
