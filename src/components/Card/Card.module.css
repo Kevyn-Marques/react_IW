@@ -6,3 +6,7 @@
     width:215px;
     border-radius:8px;
 }
+.card :hover{
+    transform: scale(105%);
+    animation: 9s ease-in;
+}
