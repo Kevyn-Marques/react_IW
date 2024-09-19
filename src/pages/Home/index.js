@@ -1,10 +1,26 @@
-import Home from './pages/Home';
-function App() {
+import Header from "../../components/Header";
+import Banner from "../../components/Banner";
+import Container from "../../components/Container";
+import Category, {categories,filterCategory} from "../../components/Category";
+import Card from "../../components/Card";
+import Footer from "../../components/Footer";
+import { useState } from "react";
+
+function Home() {
   return (
     <>
-        <Home/>
+    <Header/>
+    <Banner image = "favoritos" />
+    <Container>
+      {categories.map((category,index) =>
+        <Category category={category}>
+        {filterCategory(index).map((video) => <Card id={video.id} key={video.id} />)}
+        </Category>
+        )}
+    </Container>
+    <Footer/>
     </>
 );
 }
 
-export default App;
+export default Home;
