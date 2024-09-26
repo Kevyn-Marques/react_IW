@@ -7,19 +7,20 @@ export const categories = [
     "Astronomia e Geografia",
     "Climatologia, Meteorologia, Vegetação",
     "Geologia e Hidrografia"
-]
+  ]
 
 export function filterCategory(id) {
     return videos.filter( video => video.category === categories[id] )
 }
 
 function Category({ category, children }) {
-    return(
+
+    return (
         <section className={styles.category}>
             <h2>{category}</h2>
-            <div>
-                {children}
-            </div>
+                <div>
+                    { children }
+                </div>
         </section>
     );
 }
